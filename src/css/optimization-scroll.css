@@ -1,0 +1,9 @@
+.optimization-scroll {
+  will-change: transform;
+  cursor: grab;
+  flex-wrap: nowrap;
+}
+
+.optimization-scroll:active {
+  cursor: grabbing;
+}

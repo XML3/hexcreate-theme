@@ -1,0 +1,20 @@
+{
+  "node_modules/p5/dist/app.js": {
+    "file": "assets/app-BW7sYr0m.js",
+    "name": "app",
+    "src": "node_modules/p5/dist/app.js",
+    "isDynamicEntry": true
+  },
+  "src/js/main.js": {
+    "file": "assets/main-LUeSCU2p.js",
+    "name": "main",
+    "src": "src/js/main.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/p5/dist/app.js"
+    ],
+    "css": [
+      "assets/main-BbuJ3PQd.css"
+    ]
+  }
+}

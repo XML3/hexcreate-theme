@@ -1,0 +1,81 @@
+.accordion_arrow > div > svg {
+  display: inline-block;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-right: 20px;
+}
+
+.accordion_active > div > svg {
+  transform: rotate(-270deg);
+}
+.accordion_arrow > div > svg {
+  transform: rotate(-135deg);
+}
+
+.accordion_arrow_lg {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+  margin-right: 15px;
+}
+
+.accordion_active .accordion_arrow_lg {
+  transform: rotate(45deg);
+}
+
+.accordion_content ul {
+  list-style-type: disc !important; /* bullets */
+  padding-left: 1.5rem !important; /* indentation */
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.accordion_content li {
+  margin-bottom: 0.25rem; /* space between bullets */
+  line-height: 1.5;
+  display: list-item !important;
+}
+
+/* If the list is inside a div from wpautop */
+.accordion_content div ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+}
+
+/* For nested lists */
+.accordion_content ul ul {
+  list-style-type: circle !important;
+  padding-left: 1.5rem !important;
+}
+
+.wrap_content h3 {
+  font-weight: 600;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.wrap_content ul {
+  list-style-type: disc; /* bullets */
+  padding-left: 1.5rem; /* indentation */
+}
+
+.wrap_content li {
+  margin-bottom: 0.25rem; /* space between bullets */
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .accordion_content ul {
+    padding-left: 3rem !important; /* indentation */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .accordion_content li {
+    margin-bottom: 2rem; /* space between bullets */
+  }
+}

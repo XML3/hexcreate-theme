@@ -1,0 +1,64 @@
+.site-footer {
+  margin-top: 10%;
+}
+
+.site-footer .color-shift {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.site-footer .color-shift::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  background-color: var(--color-accent-orange);
+  transition: bottom 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.site-footer .color-shift:hover::before {
+  bottom: 0;
+}
+
+/* Ensure text remains readable on hover */
+.site-footer .color-shift:hover {
+  color: var(--color-primary);
+}
+
+.site-footer .color-shft:hover .logo-default {
+  opacity: 0;
+}
+
+.site-footer .color-shift:hover .logo-black {
+  opacity: 1;
+}
+
+.site-footer .color-shift:hover h2,
+.site-footer .color-shift:hover h3,
+.site-footer .color-shift:hover p,
+.site-footer .color-shift:hover a {
+  color: var(--color-title);
+}
+
+.site-footer .color-shift:hover h4 {
+  color: var(--color-font);
+}
+
+footer div {
+  outline: 1px solid var(--color-title);
+}
+
+footer div.no-outline {
+  outline: none;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 915px) {
+  .site-footer {
+    margin-top: 30%;
+  }
+}

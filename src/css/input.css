@@ -1,0 +1,370 @@
+@import "tailwindcss";
+@import "./_typography.css";
+@import "./accordion.css";
+@import "./hero-logo.css";
+@import "./text-scroll.css";
+@import "./halftone.css";
+@import "./cards.css";
+@import "./dev-page.css";
+@import "./hidden-cards.css";
+@import "./stack-cards.css";
+@import "./footer.css";
+@import "./overlaping.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+section:first-of-type {
+  margin-top: -73px;
+}
+
+@font-face {
+  font-family: "KellySlab";
+  src: url("/wp-content/themes/hexcreate/fonts/KellySlab-Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/wp-content/themes/hexcreate/fonts/Manrope-VariableFont_wght.woff2");
+  font-weight: 400; /* Normal/Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/wp-content/themes/hexcreate/fonts/Inter-VariableFont_opsz,wght.woff2");
+  font-weight: 400; /* Normal/Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kode";
+  src: url("/wp-content/themes/hexcreate/fonts/KodeMono-VariableFont_wght.woff2");
+  font-weight: 400; /* Normal/Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Ensure hamburger button is always clickable */
+#hamburger-menu {
+  z-index: 12501 !important;
+  pointer-events: auto !important;
+  position: relative;
+}
+
+/* Mobile menu overlay protection */
+#mobile-menu {
+  z-index: 12500 !important;
+  pointer-events: auto !important;
+}
+
+/* Header should be above everything */
+header {
+  z-index: 12000 !important;
+  pointer-events: none !important;
+}
+
+header > * {
+  pointer-events: auto !important;
+}
+
+@theme {
+  --breakpoint-xxs: 320px;
+  --breakpoint-xs: 430px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --max-width-container-content: 1440px;
+  --max-width-container-wide: 1820px;
+
+  --padding-small: 1rem;
+  --padding-medium: 2rem;
+  --padding-large: 3rem;
+  --padding-xlarge: 4rem;
+
+  --color-primary: #ffffff;
+  --color-secondary: #f3f3f3;
+  --color-details: #616060;
+  --color-font: #5c5c5c;
+  --color-title: #1a1a1a;
+  --color-darkfont: #3b3a3a;
+  --color-light: #5c5c5c;
+  --color-accent: #004f5d;
+  --color-accent-orange: #ff5050;
+  --color-accent-cream: #d4c4b0;
+
+  --font-kelly: "KellySlab", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-kode: "Kode", sans-serif;
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  .bg-light {
+    background-color: var(--color-light);
+  }
+
+  .text-offwhite {
+    color: var(--color-font);
+  }
+}
+
+@layer utilities {
+  @keyframes background-move {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-background {
+    background: linear-gradient(
+      120deg,
+      #0a192f,
+      #004f5d,
+      #16213e,
+      #004f5d,
+      #0a192f
+    );
+    background-size: 350% 350%;
+    animation: background-move 10s ease infinite;
+  }
+}
+
+@layer components {
+  .container-wide,
+  .container-content {
+    width: 100%;
+    /* max-width: var(--max-width-container-content); */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--padding-small);
+    padding-right: var(--padding-small);
+  }
+
+  .container-wide {
+    max-width: var(--max-width-container-wide);
+  }
+
+  .container-content {
+    max-width: var(--max-width-container-content);
+  }
+
+  @media (min-width: 640px) {
+    .container-wide,
+    .container-content {
+      padding-left: var(--padding-medium);
+      padding-right: var(--padding-medium);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container-wide,
+    .container-content {
+      padding-left: var(--padding-medium);
+      padding-right: var(--padding-medium);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-wide,
+    .container-content {
+      padding-left: var(--padding-large);
+      padding-right: var(--padding-large);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-wide,
+    .container-content {
+      padding-left: var(--padding-large);
+      padding-right: var(--padding-large);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container-wide,
+    .container-content {
+      padding-left: var(--padding-xlarge);
+      padding-right: var(--padding-xlarge);
+    }
+  }
+}
+
+@layer utilities {
+  .header-nav-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  /* @media (max-width: 1023px) { */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+
+  .ticker-wrap:hover .animate-scroll {
+    animation-play-state: paused;
+  }
+
+  .ticker {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .ticker .slide {
+    display: inline-block;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@layer utilities {
+  .breadcrumbs-container {
+    display: none !important;
+  }
+}
+
+/*Card Border animated */
+@layer utilities {
+  .card-wrapper {
+    position: relative;
+    border-radius: 0.5rem;
+  }
+
+  .card-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    padding: 1px;
+    background: linear-gradient(60deg, #ff5050, #004f5d, #ff5050);
+    background-size: 300% 300%;
+    animation: border-spin 3s ease infinite;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .card-content {
+    /* background-color: #0f0f0f; */
+    border-radius: 0.5rem;
+    height: 100%;
+  }
+
+  @keyframes border-spin {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+/* } */
+/*Responsive Design helpers */
+@layer utilities {
+  @media (max-height: 950px) {
+    .h-screen-if-tall {
+      height: auto !important;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+  }
+
+  @media (max-height: 600px) and (max-width: 1024px) {
+    .short-mobile-scroll {
+      height: auto !important;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+  }
+}
+
+@layer utilities {
+  @media screen and (min-height: 1000px) and (max-width: 1300px) {
+    .tall-tablet-scroll-50 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: auto !important;
+      max-height: 50vh;
+      padding-bottom: 4rem;
+    }
+  }
+
+  @media screen and (min-height: 900px) and (max-width: 1200px) {
+    .tall-tablet-scroll-900 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: auto !important;
+      max-height: 100vh;
+      padding-bottom: 4rem;
+    }
+  }
+
+  @media screen and (min-height: 1000px) and (max-width: 1300px) {
+    .tall-tablet-scroll {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: auto !important;
+      min-height: 100vh;
+      padding-bottom: 4rem;
+    }
+  }
+
+  /* Fix iOS background images */
+  @supports (-webkit-touch-callout: none) {
+    [style*="background-image"] {
+      -webkit-background-size: contain !important;
+      background-size: contain !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-attachment: scroll !important;
+    }
+  }
+}

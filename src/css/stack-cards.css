@@ -1,0 +1,78 @@
+/* DEVELOPMENT TECH STACK CARDS*/
+
+.stack-card-item {
+  --cardWidth: min(380px, 80vw);
+  position: relative;
+  width: var(--cardWidth);
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background: linear-gradient(135deg, #004f5d, #0a192f, #020c1a);
+  z-index: 2;
+  transform-origin: bottom right;
+  transition:
+    transform 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.3s ease;
+}
+
+.card-back {
+  background: var(--color-secondary);
+  z-index: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  transform-origin: bottom right;
+  transform: scale(0);
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.stack-card-item:hover .card-front {
+  transform: scale(0);
+}
+
+.stack-card-item:hover .card-back {
+  transform: scale(1);
+}
+
+/*Development Cards*/
+
+@media only screen and (min-width: 300px) and (max-width: 915px) {
+  .stack-card-item {
+    --cardWidth: min(320px, 75vw);
+  }
+}
+
+@media (max-width: 1024px) {
+  .stack-card-item {
+    max-width: 360px;
+  }
+}
+@media only screen and (min-width: 1280) and (max-width: 1400px) {
+  .stack-card-item {
+    max-width: 280px;
+  }
+}
+
+@media only screen and (min-width: 1400) and (max-width: 1600px) {
+  .stack-card-item {
+    max-width: 315px;
+  }
+}

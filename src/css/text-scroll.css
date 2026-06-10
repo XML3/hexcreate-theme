@@ -1,0 +1,13 @@
+/* Target only the process section */
+.process-section {
+  overflow: visible;
+  isolation: isolate;
+}
+
+.process-section .grid {
+  overflow: visible;
+}
+
+.vertical-text-scroll {
+  transform: translateZ(0); /* Forces GPU layer */
+}

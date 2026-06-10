@@ -1,0 +1,5 @@
+.hero-dev-title {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}

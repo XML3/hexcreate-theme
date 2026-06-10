@@ -1,0 +1,21 @@
+.hidden-card {
+  display: none;
+  width: 500px;
+  height: auto;
+}
+
+.hidden-card.active {
+  display: block;
+  width: 500px;
+  height: auto;
+}
+
+.hidden-card .flex {
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+  .hidden-card .flex {
+    flex-wrap: nowrap;
+  }
+}

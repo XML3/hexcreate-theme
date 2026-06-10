@@ -1,0 +1,90 @@
+.hero-hexagon-bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-logo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.hero-logo-mask {
+  width: 100%;
+  height: 300px;
+  /* The SVG mask */
+  -webkit-mask-image: url("/wp-content/themes/hexcreate/src/images/HexCreate-black.png");
+  mask-image: url("/wp-content/themes/hexcreate/src/images/HexCreate-black.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background: linear-gradient(135deg, #e41352, #ff6b9d);
+  background-size: contain;
+}
+
+.hero-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Initial hidden states */
+.hero-title,
+.hero-subtitle,
+.flex.flex-col.lg\\:flex-row,
+.hero-subtitle-two,
+.hero-number-item {
+  will-change: transform, opacity;
+}
+/* Force containers to not affect layout */
+.hero-section {
+  overflow-x: clip; /* Prevents any horizontal overflow */
+}
+
+.hero-section * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure the animated text doesn't cause overflow */
+.dev-title,
+.design-title {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* SplitText characters */
+[class*="char"] {
+  display: inline-block;
+  white-space: pre;
+  transform-origin: center center;
+}
+@media screen and (max-width: 1279px) {
+  .hero-section {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .fixed-logo {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px) {
+  .hero-logo-mask {
+    width: 100%;
+    height: 200px;
+  }
+}
