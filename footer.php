@@ -41,8 +41,8 @@ $footer_location = get_field('footer_location');
                 <div class="w-full flex flex-col">
                     <h4 class="font-kode thin-12 text-font mb-2 py-4 pl-4">02. Socials</h4>
                     <div class="font-inter text-title normal-14 flex flex-col py-4 pl-4">
-                        <a href="" target="_blank" class="font-inter normal-14 text-title">LinkedIn</a>
-                        <a href="" target="_blank" class="font-inter normal-14 text-title">Instagram</a>
+                        <a href="https://www.linkedin.com/company/hexcreate" target="_blank" class="font-inter normal-14 text-title">LinkedIn</a>
+                        <a href="https://www.instagram.com/hexcreaten" target="_blank" class="font-inter normal-14 text-title">Instagram</a>
                     </div>
                 </div>
 
