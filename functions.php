@@ -322,13 +322,12 @@ function register_stack_cards_cpt()
 add_action('init', 'register_stack_cards_cpt');
 
 // Force Fluent Forms to load assets on the contact page
-add_action('wp_enqueue_scripts', 'force_fluent_form_assets');
 function force_fluent_form_assets() {
-    if (is_page('contact')) { // Change 'contact' to your page slug
+    if (is_page('contact')) { 
         if (function_exists('wpFluentForm')) {
-            // Force load Fluent Forms scripts and styles
             wp_enqueue_script('fluentform-public');
-            wp_enqueue_style('fluent-form-styles');
+            wp_enqueue_style('fluentform-public-default');
         }
     }
 }
+add_action('wp_enqueue_scripts', 'force_fluent_form_assets');

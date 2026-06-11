@@ -1,12 +1,12 @@
 {
   "node_modules/p5/dist/app.js": {
-    "file": "assets/app-BW7sYr0m.js",
+    "file": "production-assets/app-BOJzIkwb.js",
     "name": "app",
     "src": "node_modules/p5/dist/app.js",
     "isDynamicEntry": true
   },
   "src/js/main.js": {
-    "file": "assets/main-LUeSCU2p.js",
+    "file": "production-assets/main-SZoKKkCn.js",
     "name": "main",
     "src": "src/js/main.js",
     "isEntry": true,
@@ -14,7 +14,7 @@
       "node_modules/p5/dist/app.js"
     ],
     "css": [
-      "assets/main-BbuJ3PQd.css"
+      "production-assets/main--KdUcnyQ.css"
     ]
   }
 }
