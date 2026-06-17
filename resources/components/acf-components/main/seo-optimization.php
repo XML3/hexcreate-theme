@@ -53,7 +53,7 @@ if (!$seo_title && !$seo_subtitle && !$seo_content && !$optimization && !$optimi
             <div class="optimization-scroll flex gap-6 pb-4 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 flex-wrap sm:flex-nowrap">
                 <?php foreach ($items as $item): ?>
 
-                    <div class="card-wrapper max-w-100 p-1 shrink-0">
+                    <div class="card-wrapper max-w-100 p-1 shrink-0 w-full sm:w-auto">
                         <div class="card-content p-4 rounded-lg space-y-4 bg-primary h-full min-h-70 flex flex-col m-2">
                             <?php if ($item['title']): ?>
                                 <h2 class="font-inter bold-18 text-title"><?php echo esc_html($item['title']); ?></h2>
