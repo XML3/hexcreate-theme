@@ -36,7 +36,7 @@ if (!$design_title && !$design_subtitle && !$design_content && !$percentage_bloc
 </div>
 </section>
 
-<section class="lg:min-h-[calc(100vh-35vh)] bg-primary flex items-center mt-16 xl:mt-0 ">
+<section class="lg:min-h-[calc(100vh-35vh)] bg-primary flex items-center mt-6 xl:mt-0 ">
     <div class="container-content">
     <div class="background-reveal vertical-text-scroll  w-full h-full grid grid-cols-1 xl:grid-cols-2">
         <!--Left column with image-->
