@@ -50,7 +50,7 @@ if (!$seo_title && !$seo_subtitle && !$seo_content && !$optimization && !$optimi
         }
     ?>
         <div class="optimization-scroll-wrapper overflow-x-hidden">
-            <div class="optimization-scroll flex gap-6 pb-4 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="optimization-scroll flex gap-6 pb-4 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 flex-wrap sm:flex-nowrap">
                 <?php foreach ($items as $item): ?>
 
                     <div class="card-wrapper max-w-100 p-1 shrink-0">

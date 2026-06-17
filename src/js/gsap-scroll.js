@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function initHorizontalScroll() {
   // ADD THIS LINE - Skip animation on mobile/tablet
-  if (window.innerWidth < 1280) return;
+  if (window.innerWidth < 640) return;
 
   const scrollSection = document.querySelector(".horizontal-scroll-screen");
   const scrollContainer = document.querySelector(".optimization-scroll");
