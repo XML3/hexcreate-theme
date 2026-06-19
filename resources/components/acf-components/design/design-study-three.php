@@ -13,7 +13,7 @@ if (!$competitive_image_title && !$competitive_intro && !$competitive_image && !
 <div class="block xl:hidden">
     <!-- Top section - The Problem (bg-primary area) -->
     <div class="bg-primary py-16 px-6">
-        <div class="p-6 md:p-8 rounded-2xl">
+        <div class="space-y-8 mb-12">
            <h3 class="font-manrope normal-60 text-title"><?php echo esc_html($the_problem_title); ?></h3>
             <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($the_problem_content); ?></div>
         </div>
