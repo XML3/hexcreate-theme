@@ -2,8 +2,10 @@
 $case_study_intro_title = get_field('case_study_intro_title');
 $case_study_intro_subtitle = get_field('case_study_intro_subtitle');
 $case_study_intro_content = get_field('case_study_intro_content');
+$my_role_title = get_field('my_role_title');
+$my_role_content = get_field('my_role_content');
 $yoska_video = get_field('yoska_video');
-if (!$case_study_intro_title && !$case_study_intro_subtitle && !$case_study_intro_content && !$yoska_video) return;
+if (!$case_study_intro_title && !$case_study_intro_subtitle && !$case_study_intro_content && !$my_role_title && !$my_role_content && !$yoska_video) return;
 ?>
 <!-- MOBILE/TABLET LAYOUT (visible below 1280px) -->
 <div class="block xl:hidden">
@@ -13,6 +15,10 @@ if (!$case_study_intro_title && !$case_study_intro_subtitle && !$case_study_intr
             <h4 class="font-manrope semi-bold-20 text-title mb-4"><?php echo esc_html($case_study_intro_subtitle); ?></h4>
             <h3 class="font-manrope normal-60 text-title mb-6"><?php echo esc_html($case_study_intro_title); ?></h3>
             <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($case_study_intro_content); ?></div>
+            <div class="bg-accent-orange p-6 md:p-8 rounded-2xl">
+            <h3 class="font-manrope normal-60 text-primary mb-4"><?php echo esc_html($my_role_title); ?></h3>
+            <div class="font-inter normal-16 text-primary"><?php echo wp_kses_post($my_role_content); ?></div>
+        </div>
         </div>
     </div>
     
@@ -38,13 +44,15 @@ if (!$case_study_intro_title && !$case_study_intro_subtitle && !$case_study_intr
     <div class="relative container-wide mx-auto xl:min-h-screen tall-tablet-scroll short-mobile-scroll pointer-events-auto flex items-center">
         <div class="grid grid-cols-1 xl:grid-cols-2 w-full">
 
-            <div class="vertical-text-scroll space-y-8 w-full xl:w-3/4 bg-primary p-20 rounded-2xl">
+            <div class="vertical-text-scroll space-y-8 w-full xl:w-[95%] bg-primary p-20 rounded-2xl">
                 <h4 class="w-full xl:w-3/4 font-manrope semi-bold-20 text-title"><?php echo esc_html($case_study_intro_subtitle); ?></h4>
                 <h3 class="font-manrope normal-60 text-title"><?php echo esc_html($case_study_intro_title); ?></h3>
-                <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($case_study_intro_content); ?></div>
+                <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($case_study_intro_content); ?></div>                
+                <h3 class="font-manrope bold-40 text-title"><?php echo esc_html($my_role_title); ?></h3>
+                <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($my_role_content); ?></div>        
             </div>
             <!-- Right column content -->
-            <div class="vertical-text-scroll w-full flex justify-center xl:justify-end">
+            <div class="vertical-text-scroll w-full flex justify-center xl:justify-end items-center">
                 <?php if ($yoska_video) : ?>
 
                     <div class="relative z-10 w-full xl:max-w-[80%]">

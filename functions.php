@@ -3,73 +3,10 @@
 // Disable admin bar
 add_filter('show_admin_bar', '__return_false');
 
-// function hexcreate_files() {
-//     wp_enqueue_style('hexcreate_main_styles', get_stylesheet_uri());
-// //change to 'development when deployed
-//     if (defined('WP_ENV') && WP_ENV === 'production') {
-//         wp_enqueue_script(
-//             'hexcreate_main_js',
-//             'http://localhost:5173/src/js/main.js',
-//             [],
-//             null,
-//             true
-//         );
-        
-//         add_filter('script_loader_tag', function ($tag, $handle) {
-//             if ($handle === 'hexcreate_main_js') {
-//                 return str_replace(' src', ' type="module" src', $tag);
-//             }
-//             return $tag;
-//         }, 10, 2);
-        
-//         wp_enqueue_style(
-//             'hexcreate_main_css',
-//             'http://localhost:5173/src/css/input.css',
-//             [],
-//             null
-//         );
-//     } else {
-//         // Production code
-//         $manifest_path = get_theme_file_path('/dist/.vite/manifest.json');
-//         if (file_exists($manifest_path)) {
-//             $manifest = json_decode(file_get_contents($manifest_path), true);
-//             $entry = 'src/js/main.js';
-//             if (isset($manifest[$entry])) {
-//                 $entry_data = $manifest[$entry];
-//                 wp_enqueue_script(
-//                     'hexcreate_main_js',
-//                     get_theme_file_uri('/dist/' . $entry_data['file']),
-//                     [],
-//                     null,
-//                     true
-//                 );
-//                 add_filter('script_loader_tag', function ($tag, $handle) {
-//                     if ($handle === 'hexcreate_main_js') {
-//                         return str_replace(' src', ' type="module" src', $tag);
-//                     }
-//                     return $tag;
-//                 }, 10, 2);
-//                 if (!empty($entry_data['css'])) {
-//                     foreach ($entry_data['css'] as $css_file) {
-//                         wp_enqueue_style(
-//                             'hexcreate_main_css_' . basename($css_file, '.css'),
-//                             get_theme_file_uri('/dist/' . $css_file),
-//                             [],
-//                             null
-//                         );
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-// add_action('wp_enqueue_scripts', 'hexcreate_files');
-
 function hexcreate_files() {
     wp_enqueue_style('hexcreate_main_styles', get_stylesheet_uri());
-
-    // IF WE ARE LOCAL (DEVELOPMENT), LOAD VITE PORT 5173
-    if (defined('WP_ENV') && WP_ENV === 'development') {
+//change to 'development when deployed
+    if (defined('WP_ENV') && WP_ENV === 'production') {
         wp_enqueue_script(
             'hexcreate_main_js',
             'http://localhost:5173/src/js/main.js',
@@ -91,9 +28,8 @@ function hexcreate_files() {
             [],
             null
         );
-    } 
-    // OTHERWISE (ON HOSTINGER), AUTOMATICALLY LOAD COMPILED VITE PRODUCTION ASSETS
-    else {
+    } else {
+        // Production code
         $manifest_path = get_theme_file_path('/dist/.vite/manifest.json');
         if (file_exists($manifest_path)) {
             $manifest = json_decode(file_get_contents($manifest_path), true);
@@ -128,6 +64,70 @@ function hexcreate_files() {
     }
 }
 add_action('wp_enqueue_scripts', 'hexcreate_files');
+
+// function hexcreate_files() {
+//     wp_enqueue_style('hexcreate_main_styles', get_stylesheet_uri());
+
+//     // IF WE ARE LOCAL (DEVELOPMENT), LOAD VITE PORT 5173
+//     if (defined('WP_ENV') && WP_ENV === 'development') {
+//         wp_enqueue_script(
+//             'hexcreate_main_js',
+//             'http://localhost:5173/src/js/main.js',
+//             [],
+//             null,
+//             true
+//         );
+        
+//         add_filter('script_loader_tag', function ($tag, $handle) {
+//             if ($handle === 'hexcreate_main_js') {
+//                 return str_replace(' src', ' type="module" src', $tag);
+//             }
+//             return $tag;
+//         }, 10, 2);
+        
+//         wp_enqueue_style(
+//             'hexcreate_main_css',
+//             'http://localhost:5173/src/css/input.css',
+//             [],
+//             null
+//         );
+//     } 
+    // OTHERWISE (ON HOSTINGER), AUTOMATICALLY LOAD COMPILED VITE PRODUCTION ASSETS
+//     else {
+//         $manifest_path = get_theme_file_path('/dist/.vite/manifest.json');
+//         if (file_exists($manifest_path)) {
+//             $manifest = json_decode(file_get_contents($manifest_path), true);
+//             $entry = 'src/js/main.js';
+//             if (isset($manifest[$entry])) {
+//                 $entry_data = $manifest[$entry];
+//                 wp_enqueue_script(
+//                     'hexcreate_main_js',
+//                     get_theme_file_uri('/dist/' . $entry_data['file']),
+//                     [],
+//                     null,
+//                     true
+//                 );
+//                 add_filter('script_loader_tag', function ($tag, $handle) {
+//                     if ($handle === 'hexcreate_main_js') {
+//                         return str_replace(' src', ' type="module" src', $tag);
+//                     }
+//                     return $tag;
+//                 }, 10, 2);
+//                 if (!empty($entry_data['css'])) {
+//                     foreach ($entry_data['css'] as $css_file) {
+//                         wp_enqueue_style(
+//                             'hexcreate_main_css_' . basename($css_file, '.css'),
+//                             get_theme_file_uri('/dist/' . $css_file),
+//                             [],
+//                             null
+//                         );
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// add_action('wp_enqueue_scripts', 'hexcreate_files');
 
 // Featured images
 function my_theme_setup() {
