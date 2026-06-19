@@ -12,7 +12,7 @@
   transform: rotate(-135deg);
 }
 
-.accordion_arrow_lg {
+/* .accordion_arrow_lg {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -21,11 +21,11 @@
   transform: rotate(-45deg);
   transition: transform 0.3s ease;
   margin-right: 15px;
-}
+} */
 
-.accordion_active .accordion_arrow_lg {
+/* .accordion_active .accordion_arrow_lg {
   transform: rotate(45deg);
-}
+} */
 
 .accordion_content ul {
   list-style-type: disc !important; /* bullets */

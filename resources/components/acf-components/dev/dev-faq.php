@@ -36,7 +36,7 @@ if (!$accordion_two && !$faq_title) return;
                                     <div class="accordion border-b border-black/70 last:border-b-0 p-4 md:p-8 xl:p-0">
                                         <div class="accordion_intro medium-18 font-inter m-1 xl:m-4 cursor-pointer text-title flex justify-between items-center">
                                             <?php echo esc_html($item['title']); ?>
-                                            <svg clas="accordion-active" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg clas="accordion-active flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M18.75 4H9.5v1.5h7.94L3.97 18.97l1.06 1.06L18.5 6.56v7.94H20V5.25C20 4.56 19.44 4 18.75 4Z" fill="#0f0f0f" />
                                             </svg>
                                         </div>

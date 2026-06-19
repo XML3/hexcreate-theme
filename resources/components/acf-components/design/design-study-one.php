@@ -11,14 +11,12 @@ if (!$case_study_intro_title && !$case_study_intro_subtitle && !$case_study_intr
 <div class="block xl:hidden">
     <!-- Top section with bg-secondary -->
     <div class="bg-secondary py-16 px-6">
-        <div class="bg-primary p-6 md:p-8 rounded-2xl mb-8">
+        <div class="bg-primary p-6 md:p-8 rounded-2xl mb-8 space-y-8">
             <h4 class="font-manrope semi-bold-20 text-title mb-4"><?php echo esc_html($case_study_intro_subtitle); ?></h4>
             <h3 class="font-manrope normal-60 text-title mb-6"><?php echo esc_html($case_study_intro_title); ?></h3>
             <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($case_study_intro_content); ?></div>
-            <div class="bg-accent-orange p-6 md:p-8 rounded-2xl">
-            <h3 class="font-manrope normal-60 text-primary mb-4"><?php echo esc_html($my_role_title); ?></h3>
-            <div class="font-inter normal-16 text-primary"><?php echo wp_kses_post($my_role_content); ?></div>
-        </div>
+            <h3 class="font-manrope normal-60 text-title mb-4"><?php echo esc_html($my_role_title); ?></h3>
+            <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($my_role_content); ?></div>
         </div>
     </div>
     
@@ -55,7 +53,7 @@ if (!$case_study_intro_title && !$case_study_intro_subtitle && !$case_study_intr
             <div class="vertical-text-scroll w-full flex justify-center xl:justify-end items-center">
                 <?php if ($yoska_video) : ?>
 
-                    <div class="relative z-10 w-full xl:max-w-[80%]">
+                    <div class="relative z-10 w-full xl:max-w-xl h-auto">
                         <video autoplay muted loop playsinline preload="metadata" aria-label="Opening video composed with many different brand related images">
                             <source src="<?php echo esc_url($yoska_video) ?>" type="video/mp4">
                         </video>

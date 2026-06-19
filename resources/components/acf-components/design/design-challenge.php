@@ -26,11 +26,9 @@ if (!$project_overview_title && !$pain_point_title && !$pain_point_content && !$
 
     <!-- Bottom section with bg-secondary for image -->
     <div class="bg-secondary py-16 px-6">
-        <div class="bg-primary p-6 md:p-8 rounded-2xl">
             <h3 class="font-manrope bold-40 text-title mb-6"><?php echo esc_html($example_image_title); ?></h3>
             <div class="flex justify-center w-full">
                 <img class="w-full max-w-sm h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($example_image['url']); ?>" alt="<?php echo esc_attr($example_image['alt']); ?>">
-            </div>
         </div>
     </div>
 </div>
@@ -54,11 +52,9 @@ if (!$project_overview_title && !$pain_point_title && !$pain_point_content && !$
             </div>
             <!-- Right column content -->
             <div class="vertical-text-scroll space-y-8 w-full xl:w-3/4 flex justify-self-end items-center flex-col">
-                <h3 class="font-inter bold-40 text-title text-center"><?php echo esc_html($example_image_title); ?></h3>
-                <div class=" bg-primary p-8 rounded-2xl">
+                <h3 class="font-inter bold-40 text-title text-center"><?php echo esc_html($example_image_title); ?></h3>              
                     <div class="flex justify-center w-full">
-                        <img class="w-full max-w-xl h-auto object-contain drop-shadow-sm/50 " src="<?php echo esc_url($example_image['url']); ?>" alt="<?php echo esc_attr($example_image['alt']); ?>">
-                    </div>
+                        <img class="w-full max-w-2xl h-auto object-contain drop-shadow-sm/50 " src="<?php echo esc_url($example_image['url']); ?>" alt="<?php echo esc_attr($example_image['alt']); ?>">
                 </div>
             </div>
             <div>

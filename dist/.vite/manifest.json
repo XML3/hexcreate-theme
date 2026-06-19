@@ -6,7 +6,7 @@
     "isDynamicEntry": true
   },
   "src/js/main.js": {
-    "file": "production-assets/main-B7EOlMrH.js",
+    "file": "production-assets/main-25GwyarR.js",
     "name": "main",
     "src": "src/js/main.js",
     "isEntry": true,
@@ -14,7 +14,7 @@
       "node_modules/p5/dist/app.js"
     ],
     "css": [
-      "production-assets/main-DATgxAm5.css"
+      "production-assets/main-D_sUdQ1U.css"
     ]
   }
 }
