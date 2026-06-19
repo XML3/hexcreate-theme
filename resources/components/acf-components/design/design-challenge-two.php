@@ -8,7 +8,7 @@ if (!$primary_solution_title && !$primary_solution_content  && !$final_image_tit
 ?>
 <!-- MOBILE/TABLET LAYOUT (visible below 1280px) -->
 <div class="block xl:hidden">
-    <div class="bg-secondary py-16 px-6">
+    <div class="bg-primary py-16 px-6">
         <div class="space-y-8 mb-12">
             <h4 class="font-inter semi-bold-20 text-title"><?php echo esc_html($primary_solution_title); ?></h4>
             <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($primary_solution_content); ?></div>
@@ -17,9 +17,9 @@ if (!$primary_solution_title && !$primary_solution_content  && !$final_image_tit
 
     <!-- Bottom section with bg-secondary for image -->
     <div class="bg-accent py-16 px-6">
-            <h3 class="font-manrope bold-40 text-primary mb-6"><?php echo esc_html($final_image_title); ?></h3>
+            <h3 class="font-manrope bold-40 text-primary mb-6 text-center"><?php echo esc_html($final_image_title); ?></h3>
             <div class="flex justify-center w-full">
-                <img class="w-full max-w-sm h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($final_image['url']); ?>" alt="<?php echo esc_attr($final_image['alt']); ?>">
+                <img class="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($final_image['url']); ?>" alt="<?php echo esc_attr($final_image['alt']); ?>">
             </div>
     </div>
 </div>

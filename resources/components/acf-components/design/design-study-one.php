@@ -21,9 +21,9 @@ if (!$case_study_intro_title && !$case_study_intro_subtitle && !$case_study_intr
     </div>
     
     <!-- Bottom section with bg-accent for video -->
-    <div class="bg-accent py-16 px-6">
+    <div class="bg-accent py-16 px-6 flex items-center justify-center">
         <?php if ($yoska_video) : ?>
-            <div class="w-full">
+            <div class="w-full md:max-w-md lg:max-w-lg">
                 <video autoplay muted loop playsinline preload="metadata" aria-label="Opening video composed with many different brand related images" class="w-full h-auto rounded-2xl">
                     <source src="<?php echo esc_url($yoska_video) ?>" type="video/mp4">
                 </video>

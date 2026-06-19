@@ -8,7 +8,31 @@ $story_content = get_field('story_content');
 
 if (!$about_title && !$about_content && !$open_statement_title && !$open_statement_content && !$story_tite && !$story_content)  return;
 ?>
-<section class="relative min-h-screen tall-tablet-scroll short-mobile-scroll ">
+
+<!-- MOBILE/TABLET LAYOUT (visible below 1280px) -->
+<div class="block xl:hidden tall-tablet-scroll short-mobile-scroll pointer-events-auto items-center">
+    <!-- Top section - UX Decision Card -->
+    <div class="bg-primary py-16 px-6">
+        <div class="bg-accent-orange p-6 md:p-8 rounded-2xl space-y-8">
+            <h3 class="font-manrope normal-60 text-primary mb-4"><?php echo esc_html($about_title); ?></h3>
+            <div class="font-inter normal-16 text-primary"><?php echo wp_kses_post($about_content); ?></div>
+        </div>
+    </div>
+    
+    <!-- Bottom section - UI Decision Card -->
+    <div class="bg-secondary py-16 px-6 mb-8">
+        <div class="bg-primary p-6 md:p-8 rounded-2xl space-y-8">
+        <h4 class="vertical-text-scroll font-manrope semi-bold-20 text-title text-left lg:text-left space-y-6"><?php echo esc_html($open_statement_title); ?></h4>
+                <div class="vertical-text-scroll font-inter normal-16 text-font text-left lg:text-left"><?php echo wp_kses_post($open_statement_content); ?></div>
+                <h4 class="vertical-text-scroll font-manrope semi-bold-20 text-title text-left lg:text-left"><?php echo esc_html($story_tite); ?></h4>
+                <div class="vertical-text-scroll font-inter normal-16 text-font text-left lg:text-left"><?php echo wp_kses_post($story_content); ?></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DESKTOP LAYOUT (visible above 1280px) -->
+<section class="hidden xl:block relative xl:h-screen">
         <!-- Background colors - absolute positioned to span full width -->
     <div class="absolute inset-0 grid grid-cols-1 lg:grid-cols-2">
         <div class="bg-primary"></div>
@@ -18,7 +42,7 @@ if (!$about_title && !$about_content && !$open_statement_title && !$open_stateme
         <div class="grid grid-cols-1 lg:grid-cols-2 w-full mt-8 xl:mt-0">
              
         <div class="vertical-text-scroll space-y-8 w-full xl:w-3/4">
-                 <div class="space-y-4 bg-accent-orange p-8 rounded-2xl">
+                 <div class="space-y-6 bg-accent-orange p-8 rounded-2xl">
                     <h2 class="bold-62 font-manrope text-secondary"><?php echo esc_html($about_title)?></h2>
                     <div class="font-inter normal-16 text-secondary"><?php echo wp_kses_post($about_content); ?></div>
                  </div>

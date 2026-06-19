@@ -53,8 +53,6 @@ if (!$design_intro_title && !$design_intro_subtitle && !$design_intro_content &&
                 <div class=" font-inter semi-bold-20 text-title text-left lg:text-left"><?php echo wp_kses_post($ui_title); ?></div>
                 <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($ui_content); ?></div>
             </div>
-            <div>
-
-            </div>
         </div>
+    </div>
 </section>

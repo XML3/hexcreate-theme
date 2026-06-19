@@ -27,7 +27,7 @@ if ( !$research_title_two && !$research_subtitle_two && !$research_content_two &
             <h3 class="font-manrope normal-60 text-primary text-center md:text-left"><?php echo esc_html($carousel_wireframe_title); ?></h3>
              <h4 class="font-manrope semi-bold-20 text-primary text-center md:text-left"><?php echo esc_html($carousel_wireframe_subtitle); ?></h4>
             <div class="flex justify-center w-full">
-                <img class="max-w-full h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($carousel_wireframe['url']); ?>" alt="<?php echo esc_attr($carousel_wireframe['alt']); ?>">
+                <img class="max-w-full md:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($carousel_wireframe['url']); ?>" alt="<?php echo esc_attr($carousel_wireframe['alt']); ?>">
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@ if ( !$research_title_two && !$research_subtitle_two && !$research_content_two &
                 <h3 class="font-manrope normal-60 text-primary"><?php echo esc_html($carousel_wireframe_title); ?></h3>
                   <h4 class="font-manrope semi-bold-20 text-primary"><?php echo esc_html($carousel_wireframe_subtitle); ?></h4>
                 <div class="flex justify-center xl:justify-end w-full">
-                <img class="w-full max-w-xl h-auto  object-contain drop-shadow-sm/50 " src="<?php echo esc_url($carousel_wireframe['url']); ?>" alt="<?php echo esc_attr($carousel_wireframe['alt']); ?>">
+                <img class="w-full max-w-125 h-auto  object-contain drop-shadow-sm/50 " src="<?php echo esc_url($carousel_wireframe['url']); ?>" alt="<?php echo esc_attr($carousel_wireframe['alt']); ?>">
             </div>      
             </div>
         <div>     

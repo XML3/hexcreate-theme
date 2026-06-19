@@ -33,7 +33,7 @@ if (!$ui_decision_title && !$ux_decision_content && !$ui_decision_title && !$ui_
          <div class="bg-primary"></div>
         <div class="bg-secondary"></div>
     </div>
-    < <div class="relative container-wide mx-auto xl:min-h-screen tall-tablet-scroll short-mobile-scroll pointer-events-auto flex items-center">
+    <div class="relative container-wide mx-auto xl:min-h-screen tall-tablet-scroll short-mobile-scroll pointer-events-auto flex items-center">
         <div class="grid grid-cols-1 xl:grid-cols-2 w-full">
             <div class="vertical-text-scroll space-y-8 w-full xl:w-[95%] bg-accent-orange p-20 rounded-2xl">
                 <h3 class="font-manrope normal-60 text-primary"><?php echo esc_html($ux_decision_title); ?></h3>

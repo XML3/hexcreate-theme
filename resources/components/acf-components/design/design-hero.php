@@ -11,7 +11,7 @@ if (!$design_hero_title && !$design_hero_subtitle && !$design_hero_subtitle_two 
 ?>
 <section class="min-h-screen relative border-b border-title">
     <!-- Mobile: 1 column, Desktop: 2 columns -->
-    <div class="grid grid-cols-1 xl:grid-cols-[2fr_1fr] h-auto xl:h-screen short-mobile-scroll">
+    <div class="grid grid-cols-1 xl:grid-cols-[2fr_1fr] h-auto short-mobile-scroll">
 
         <!-- Left Column -->
         <div class="bg-secondary flex flex-col justify-end items-center min-h-[50vh] xl:min-h-0 order-1 xl:order-0">

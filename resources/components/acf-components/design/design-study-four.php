@@ -26,7 +26,7 @@ if (!$research_title && !$research_subtitle && !$research_content && !$price_wir
             <h3 class="font-manrope normal-60 text-primary text-center md:text-left"><?php echo esc_html($price_wireframe_title); ?></h3>
              <h4 class="font-manrope semi-bold-20 text-primary text-center md:text-left"><?php echo esc_html($price_wireframe_subtitle); ?></h4>
             <div class="flex justify-center w-full">
-                <img class="max-w-full h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($price_wireframe_image['url']); ?>" alt="<?php echo esc_attr($price_wireframe_image['alt']); ?>">
+                <img class="max-w-full md:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($price_wireframe_image['url']); ?>" alt="<?php echo esc_attr($price_wireframe_image['alt']); ?>">
             </div>
         </div>
     </div>

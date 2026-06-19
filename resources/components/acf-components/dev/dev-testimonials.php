@@ -26,11 +26,11 @@ if (!$testimonial_title && !$testimonials && !$maintenance_title && !$maintenanc
                         ?>
 
                             <div class="container-content grid grid-cols-1 lg:grid-cols-3 gap-8">
-                                <div class="flex justify-between items-center mt-4 xl:mt-0">
+                                <div class="flex justify-center lg:justify-between items-center mt-4 xl:mt-0">
                                     <h2 class="font-manrope bold-62 text-title"><?php echo esc_html($testimonial_title); ?></h2>
                                 </div>
                                 <?php foreach ($items as $item): ?>
-                                    <div class="flex flex-col justify-between items-center text-center bg-secondary shadow-lg/30 p-3 lg:p-5 rounded-xl max-w-lg h-full">
+                                    <div class="flex flex-col justify-self-center lg:justify-between items-center text-center bg-secondary shadow-lg/30 p-3 lg:p-5 rounded-xl max-w-lg h-full">
                                         <div class="space-y-8">
                                             <div class="flex flex-row justify-around items-center bg-font shadown-lg/30 rounded-lg p-4">
                                                 <img class="w-17 h-17 rounded-full object-cover shadow-lg/30 border border-accent-orange p-1" src="<?php echo esc_url($item['img']['url']) ?>" alt="<?php echo esc_attr($item['title']) ?>">

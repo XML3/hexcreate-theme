@@ -26,9 +26,9 @@ if (!$project_overview_title && !$pain_point_title && !$pain_point_content && !$
 
     <!-- Bottom section with bg-secondary for image -->
     <div class="bg-secondary py-16 px-6">
-            <h3 class="font-manrope bold-40 text-title mb-6"><?php echo esc_html($example_image_title); ?></h3>
+            <h3 class="font-manrope bold-40 text-title text-center mb-6"><?php echo esc_html($example_image_title); ?></h3>
             <div class="flex justify-center w-full">
-                <img class="w-full max-w-sm h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($example_image['url']); ?>" alt="<?php echo esc_attr($example_image['alt']); ?>">
+                <img class="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($example_image['url']); ?>" alt="<?php echo esc_attr($example_image['alt']); ?>">
         </div>
     </div>
 </div>

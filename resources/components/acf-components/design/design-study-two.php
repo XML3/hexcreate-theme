@@ -22,7 +22,7 @@ if (!$beyond_portfolio_title && !$beyond_portfolio_content && !$day_to_day_wiref
         <div class="bg-secondary p-6 md:p-8 rounded-2xl">
             <h3 class="font-manrope normal-60 text-title mb-6"><?php echo esc_html($day_to_day_wireframe_title); ?></h3>
             <div class="flex justify-center w-full">
-                <img class="max-w-full h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($day_to_day_wireframe['url']); ?>" alt="<?php echo esc_attr($day_to_day_wireframe['alt']); ?>">
+                <img class="max-w-full md:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-sm/50 rounded-lg" src="<?php echo esc_url($day_to_day_wireframe['url']); ?>" alt="<?php echo esc_attr($day_to_day_wireframe['alt']); ?>">
             </div>
         </div>
     </div>
