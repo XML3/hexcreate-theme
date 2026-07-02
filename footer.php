@@ -68,7 +68,7 @@ $footer_location = get_field('footer_location');
                         <h3 class="font-inter extrabold-220 text-title">HexCreate</h3>
                         <h3 class="font-inter bold-20 text-title border-2 border-title rounded-full p-2 h-1/2">HC</h3>
                     </div>
-                    <p class="font-inter thin-12 text-title text-center">©2026</p>
+                    <p class="font-inter thin-12 text-title text-center">©2026 HexCreate. All rights reserved.</p>
                 </div>
             </div>
         </div>
