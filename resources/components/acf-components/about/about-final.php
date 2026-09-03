@@ -4,8 +4,10 @@ $trust_content = get_field('trust_content');
 $hexcreate_title = get_field('hexcreate_title');
 $about_video = get_field('about_video');
 $hexcreate_mask_image = get_field('hexcreate_mask_image');
+$hexcreate_hex_video = get_field('hexcreate_hex_video');
 
-if (!$trust_title && !$trust_content && !$hexcreate_title && !$hexcreate_mask_image) return;
+
+if (!$trust_title && !$trust_content && !$hexcreate_title && !$hexcreate_mask_image && !$hexcreate_hex_video) return;
 ?>
 
 <!-- MOBILE/TABLET LAYOUT (visible below 1280px) -->
@@ -20,21 +22,17 @@ if (!$trust_title && !$trust_content && !$hexcreate_title && !$hexcreate_mask_im
     <div class="bg-primary py-16 px-6 mb-8">
         <div class="bg-secondary p-6 md:p-8 rounded-2xl">
             <div class="vertical-text-scroll w-full flex justify-center ">
-                <div class="flex justify-center items-center bg-secondary rounded-2xl p-10">
-                    <?php if ($hexcreate_title) : ?>
+                <div class="flex justify-center items-center">
+                               <div class="">   
+          <?php if ($hexcreate_hex_video) : ?>
 
-                        <div class="font-manrope extrabold-120 text-center leading-none
-                    text-transparent bg-clip-text bg-cover bg-center"
-                            style="background-image: url('<?php echo esc_url($hexcreate_mask_image['url']); ?>'); 
-                    background-size: 105%;
-                    background-position: bottom;
-                    background-repeat: no-repeat;
-                    -webkit-background-clip: text;
-                    background-clip: text;">
-                            <?php echo esc_html($hexcreate_title); ?>
-                        </div>
-
-                    <?php endif; ?>
+                    <div class="relative z-10 w-full xl:max-w-xl h-auto">
+                        <video autoplay muted loop playsinline preload="metadata" aria-label="Opening video composed with rotating waves brand related logo">
+                            <source src="<?php echo esc_url($hexcreate_hex_video) ?>" type="video/mp4">
+                        </video>
+                    </div>
+                <?php endif; ?>
+          </div>
                 </div>
             </div>
         </div>
@@ -57,21 +55,17 @@ if (!$trust_title && !$trust_content && !$hexcreate_title && !$hexcreate_mask_im
             </div>
             <!-- Right column content -->
             <div class="vertical-text-scroll w-full flex justify-center xl:justify-end">
-                <div class="flex justify-center items-center bg-secondary rounded-2xl p-10">
-                    <?php if ($hexcreate_title) : ?>
+                <div class="flex justify-center items-center bg-secondary p-6 md:p-8 rounded-2xl">
+                    <div class="">   
+          <?php if ($hexcreate_hex_video) : ?>
 
-                        <div class="font-manrope extrabold-120 text-center leading-none
-                    text-transparent bg-clip-text bg-cover bg-center"
-                            style="background-image: url('<?php echo esc_url($hexcreate_mask_image['url']); ?>'); 
-                    background-size: 105%;
-                    background-position: bottom;
-                    background-repeat: no-repeat;
-                    -webkit-background-clip: text;
-                    background-clip: text;">
-                            <?php echo esc_html($hexcreate_title); ?>
-                        </div>
-
-                    <?php endif; ?>
+                    <div class="relative z-10 w-full xl:max-w-xl h-auto">
+                        <video autoplay muted loop playsinline preload="metadata" aria-label="Opening video composed with rotating waves brand related logo">
+                            <source src="<?php echo esc_url($hexcreate_hex_video) ?>" type="video/mp4">
+                        </video>
+                    </div>
+                <?php endif; ?>
+          </div>
                 </div>
             </div>
         </div>
