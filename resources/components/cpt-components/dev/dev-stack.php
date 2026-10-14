@@ -27,7 +27,7 @@ $stack_cards = get_posts([
 
             <div class="w-full flex justify-center xl:justify-between items-center flex-col xl:flex-row ">
                 <!-- TOP Row: Text Content -->
-                <div class="flex flex-col space-y-8 w-full justify-center xl:justify-start items-center">
+                <div class="flex flex-col space-y-8 w-full justify-center xl:justify-start items-center xl:mb-27">
                     <div class="vertical-text-scroll space-y-4">
                         <h2 class="section-title font-manrope normal-20 text-title"><?php echo esc_html($stack_overview_title); ?></h2>
                         <h3 class="font-manrope bold-62 text-title w-full 2xl:w-3/4"><?php echo esc_html($stack_overview_subtitle); ?></h3>

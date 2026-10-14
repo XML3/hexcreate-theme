@@ -10,13 +10,15 @@ get_header();
     get_template_part('resources/components/acf-components/design/design-intro');
     get_template_part('resources/components/acf-components/design/design-study-one');
     get_template_part('/resources/components/acf-components/design/design-challenge');
-     get_template_part('/resources/components/acf-components/design/design-challenge-two');
-      get_template_part('resources/components/acf-components/design/design-study-three');
+    get_template_part('/resources/components/acf-components/design/design-challenge-two');
+    get_template_part('resources/components/acf-components/design/design-study-three');
     get_template_part('resources/components/acf-components/design/design-study-four');
-     get_template_part('resources/components/acf-components/design/design-research-two');
+    get_template_part('resources/components/acf-components/design/design-research-two');
     get_template_part('resources/components/acf-components/design/design-study-two');
     get_template_part('resources/components/acf-components/design/design-study-five');
     get_template_part('resources/components/acf-components/design/design-study-final');
+    get_template_part('resources/components/acf-components/design/design-more-design');
+    get_template_part('resources/components/acf-components/design/design-other-cases');
     ?>
 </main>
 <?php get_footer(); ?>
