@@ -18,7 +18,7 @@ if (!$more_design_work && !$salon_image && !$salon_study_img && !$salon_title &&
 
 <div class="block xl:hidden">
     <div class="bg-secondary py-16 px-6">
-        <div class="w-full flex items-center xl:items-start  justify-center max-h-112.5 overflow-y-scroll">
+        <div class="w-full flex items-start  justify-center max-h-112.5 overflow-y-scroll">
             <img class="max-w-full md:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-sm/50 rounded-lg border border-font p-4" src="<?php echo esc_url($salon_image['url']); ?>" alt="<?php echo esc_attr($salon_image['alt']); ?>">
             
         </div>
@@ -35,7 +35,7 @@ if (!$more_design_work && !$salon_image && !$salon_study_img && !$salon_title &&
     </div>
 
     <div class="bg-primary py-16 px-6">
-        <div class="w-full flex items-center xl:items-start  justify-center max-h-112.5 overflow-y-scroll">
+        <div class="w-full flex items-start  justify-center max-h-112.5 overflow-y-scroll">
             <img class="max-w-full md:max-w-md lg:max-w-lg h-auto object-contain drop-shadow-sm/50 rounded-lg border border-font p-4" src="<?php echo esc_url($email_img['url']); ?>" alt="<?php echo esc_attr($email_img['alt']); ?>">
            
         </div>
