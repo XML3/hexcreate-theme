@@ -9,8 +9,9 @@ $wordpress_subtitle_three = get_field('wordpress_subtitle_three');
 $wordpress_content_three = get_field('wordpress_content_three');
 $wordpress_subtitle_four = get_field('wordpress_subtitle_four');
 $wordpress_content_four = get_field('wordpress_content_four');
+$wordpress_img = get_field('wordpress_img');
 
-if ( !$wordpress_title && !$wordpress_intro && !$wordpress_subtitle && !$wordpress_content && !$wordpress_subtitle_two && !$wordpress_content_two && !$wordpress_subtitle_three && !$wordpress_content_three && !$wordpress_subtitle_four && !$wordpress_content_four)
+if ( !$wordpress_title && !$wordpress_intro && !$wordpress_subtitle && !$wordpress_content && !$wordpress_subtitle_two && !$wordpress_content_two && !$wordpress_subtitle_three && !$wordpress_content_three && !$wordpress_subtitle_four && !$wordpress_content_four && !$wordpress_img)
     return;
 ?>
 
@@ -29,19 +30,25 @@ if ( !$wordpress_title && !$wordpress_intro && !$wordpress_subtitle && !$wordpre
 
             <!-- Left column content -->
              
-            <div class="vertical-text-scroll space-y-8 w-full xl:w-3/4">
+            <div class="vertical-text-scroll space-y-8 w-full xl:w-3/4 h-full flex justify-center flex-col">
                 <div class="space-y-4">
                     <h3 class="font-manrope normal-60 text-title mb-8"><?php echo esc_html($wordpress_title); ?></h3>
                     <h4 class="font-inter normal-16 text-font"><?php echo wp_kses_post($wordpress_intro); ?></h4>
                 </div>
-                      <div class="vertical-text-scroll space-y-8 w-full xl:w-3/4">
+                      <div class="vertical-text-scroll space-y-8 w-full ">
                   <div class="font-manrope normal-16 text-font"><?php echo esc_html($wordpress_subtitle); ?></div>
                   <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($wordpress_content); ?></div>
                       </div>
             </div>
 
                  <!-- Right column content -->
-            <div class="space-y-6 w-full 2xl:w-3/4 flex justify-self-end flex-col bg-secondary p-4 xl:p-20 rounded-2xl mt-8 xl:mt-0">
+             <div class="space-x-4 w-full flex justify-between bg-secondary rounded-2xl p-4 flex-col xl:flex-row">
+                  <div class="vertical-text-scroll  w-full h-auto flex justify-center items-center mb-8 xl:mb-0 flex-col">
+                        <img class="max-w-[70%] xl:w-full h-auto object-contain rounded-lg" src="<?php echo $wordpress_img['url']; ?>" alt="<?php echo $wordpress_img['alt']; ?> ">
+                   <h3 class="font-inter bold-32 text-accent-orange">WordPress</h3>
+                    </div>   
+                 
+            <div class="space-y-6 w-full flex justify-center flex-col h-full">
              <div class="space-y-4 pt-4">
                     <h4 class="font-manrope medium-20 text-title"><?php echo esc_html($wordpress_subtitle_two); ?></h4>
                     <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($wordpress_content_two); ?></div>
@@ -54,8 +61,8 @@ if ( !$wordpress_title && !$wordpress_intro && !$wordpress_subtitle && !$wordpre
                     <h4 class="font-manrope medium-20 text-title"><?php echo esc_html($wordpress_subtitle_four); ?></h4>
                     <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($wordpress_content_four); ?></div>
                 </div>
-               
             </div>
+             </div>
 </div>
 </div>
 </section>

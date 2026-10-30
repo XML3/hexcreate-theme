@@ -12,22 +12,22 @@ if (!$seo_title && !$seo_subtitle && !$seo_content && !$optimization && !$optimi
 <div class="horizontal-scroll-screen min-h-screen bg-primary flex justify-around flex-col">
     <div class="container-wide">
         <div class="bg-secondary rounded-2xl py-8">
-        <div class="container-content w-full flex justify-between items-center flex-col xl:flex-row gap-6 xl:gap-0">
-            <!-- Top content -->
-            <div class="vertical-text-scroll  w-full space-y-4 text-left">
-                <h2 class="section-title font-manrope normal-20 text-title mb-4"><?php echo esc_html($seo_title); ?></h2>
-                <h3 class="font-manrope bold-48-62 text-title"><?php echo esc_html($seo_subtitle); ?></h3>
-                <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($seo_content); ?></div>
-            </div>
-            <?php
-            if (!empty($optimisation_image)) :
-            ?>
-                <div class="vertical-text-scroll w-full h-auto flex justify-center xl:justify-end items-center">
-                    <img class="w-30 h-auto object-contain" src="<?php echo $optimisation_image['url']; ?>" alt="<?php echo $optimisation_image['alt']; ?> ">
+            <div class="container-content w-full flex justify-between items-center flex-col xl:flex-row gap-6 xl:gap-0">
+                <!-- Top content -->
+                <div class="vertical-text-scroll w-full xl:w-1/2 space-y-4 text-left">
+                    <h2 class="section-title font-manrope normal-20 text-title mb-4"><?php echo esc_html($seo_title); ?></h2>
+                    <h3 class="font-manrope bold-48-62 text-title"><?php echo esc_html($seo_subtitle); ?></h3>
+                    <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($seo_content); ?></div>
                 </div>
-            <?php endif ?>
+                <?php
+                if (!empty($optimisation_image)) :
+                ?>
+                    <div class="vertical-text-scroll w-full  md:max-w-sm  h-auto flex justify-center xl:justify-end items-center">
+                        <img class="object-contain" src="<?php echo $optimisation_image['url']; ?>" alt="<?php echo $optimisation_image['alt']; ?> ">
+                    </div>
+                <?php endif ?>
+            </div>
         </div>
-    </div>
     </div>
     <!-- Horizontal Scroll -->
     <?php if ($optimization):

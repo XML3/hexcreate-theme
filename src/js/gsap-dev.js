@@ -57,44 +57,76 @@ function initScrambleText() {
 }
 
 // p5.js sphere - works on mobile, NO mobile check
-function initP5Sphere() {
-  const container = document.getElementById("p5-sphere-container");
-  if (!container) return;
+// p5.js sphere - reusable for multiple containers/colors
+function createSphereInitializer({
+  containerId,
+  fillColor,
+  strokeColor,
+  strokeWeight = 0.5,
+}) {
+  let p5Instance = null; // track instance so we can avoid duplicates
 
-  import("p5")
-    .then((p5Module) => {
-      const p5 = p5Module.default;
+  return function initSphere() {
+    const container = document.getElementById(containerId);
+    if (!container) return;
 
-      const sphereSketch = (p) => {
-        p.setup = () => {
-          const canvas = p.createCanvas(200, 200, p.WEBGL);
-          canvas.parent("p5-sphere-container");
+    // Prevent double-init (important for pageshow refresh)
+    if (p5Instance) {
+      p5Instance.remove();
+      p5Instance = null;
+    }
+
+    import("p5")
+      .then((p5Module) => {
+        const p5 = p5Module.default;
+
+        const sphereSketch = (p) => {
+          p.setup = () => {
+            const canvas = p.createCanvas(200, 200, p.WEBGL);
+            canvas.parent(container);
+          };
+
+          p.draw = () => {
+            p.background(15, 15, 26, 0);
+            p.fill(...fillColor);
+            p.strokeWeight(strokeWeight);
+            p.stroke(...strokeColor);
+            p.rotateX(p.millis() / 2000);
+            p.rotateY(p.millis() / 2000);
+            p.sphere(80, 24, 24);
+          };
         };
 
-        p.draw = () => {
-          p.background(15, 15, 26, 0);
-          p.fill(15, 15, 15);
-          p.strokeWeight(0.5);
-          p.stroke(100, 100, 100);
-          p.rotateX(p.millis() / 2000);
-          p.rotateY(p.millis() / 2000);
-          p.sphere(80, 24, 24);
-        };
-      };
-
-      new p5(sphereSketch);
-    })
-    .catch((err) => {
-      console.error("Failed to load p5.js:", err);
-    });
+        p5Instance = new p5(sphereSketch);
+      })
+      .catch((err) => {
+        console.error(`Failed to load p5.js for ${containerId}:`, err);
+      });
+  };
 }
 
-// Fix for back/forward navigation - only reinitialize when page is loaded from cache
+// --- Create the two initializers with different colors ---
+const initP5SphereA = createSphereInitializer({
+  containerId: "p5-sphere-container",
+  fillColor: [15, 15, 15],
+  strokeColor: [100, 100, 100],
+});
+
+const initP5SphereB = createSphereInitializer({
+  containerId: "p5-sphere-container-2",
+  fillColor: [0, 79, 93],
+  strokeColor: [204, 204, 204],
+  strokeWeight: 1,
+});
+
+// Keep an array so the pageshow handler can refresh them all
+const sphereInitializers = [initP5SphereA, initP5SphereB];
+
+// Fix for back/forward navigation
 window.addEventListener("pageshow", function (event) {
   if (event.persisted) {
-    // Only runs when page is loaded from cache (back/forward)
     setTimeout(() => {
-      initP5Sphere();
+      sphereInitializers.forEach((fn) => fn());
       if (typeof ScrollTrigger !== "undefined") {
         ScrollTrigger.refresh();
       }
@@ -106,5 +138,5 @@ window.addEventListener("pageshow", function (event) {
 document.addEventListener("DOMContentLoaded", () => {
   initHeroDev();
   initScrambleText();
-  initP5Sphere();
+  sphereInitializers.forEach((fn) => fn());
 });

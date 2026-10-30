@@ -19,7 +19,7 @@ $menu = wp_get_nav_menu_items('Top Nav');
     </div>
 <?php endif; ?>
 
-    <header class="sticky xl:top-3 left-0 w-full z-12000 bg-transparent container-wide">
+    <header class="sticky xl:top-3 left-0 w-full z-12000 bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl container-wide">
         <div class="header-nav-wrapper flex flex-row items-center justify-between w-full relative z-10 py-2">
             <div class="flex shrink-0 z-40">
                 <a href="<?php echo esc_url(home_url('/')); ?>" title="home">
