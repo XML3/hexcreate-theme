@@ -19,18 +19,34 @@ if (!$seo_title && !$seo_subtitle && !$seo_content && !$optimization && !$optimi
                     <h3 class="font-manrope bold-48-62 text-title"><?php echo esc_html($seo_subtitle); ?></h3>
                     <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($seo_content); ?></div>
                 </div>
-                <?php
-                if (!empty($optimisation_image)) :
-                ?>
-                    <div class="vertical-text-scroll w-full  md:max-w-sm  h-auto flex justify-center xl:justify-end items-center">
-                        <img class="object-contain" src="<?php echo $optimisation_image['url']; ?>" alt="<?php echo $optimisation_image['alt']; ?> ">
-                    </div>
-                <?php endif ?>
+               <?php
+if (!empty($optimisation_image)) :
+    // Normalize to array no matter the ACF return format
+    if (is_numeric($optimisation_image)) {
+        $img_id  = (int) $optimisation_image;
+        $img_url = wp_get_attachment_image_url($img_id, 'full');
+        $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
+    } elseif (is_array($optimisation_image)) {
+        $img_url = $optimisation_image['url'] ?? '';
+        $img_alt = $optimisation_image['alt'] ?? '';
+    } else {
+        $img_url = (string) $optimisation_image;
+        $img_alt = '';
+    }
+
+    if ($img_url) : ?>
+        <div class="vertical-text-scroll w-full md:max-w-sm h-auto flex justify-center xl:justify-end items-center">
+            <img class="object-contain"
+                 src="<?php echo esc_url($img_url); ?>"
+                 alt="<?php echo esc_attr($img_alt); ?>">
+        </div>
+    <?php endif;
+endif; ?>
             </div>
         </div>
     </div>
     <!-- Horizontal Scroll -->
-    <?php if ($optimization):
+    <?php if (is_array($optimization) && !empty($optimization)):
         $numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
         $items = [];
         foreach ($numbers as $num) {

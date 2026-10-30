@@ -51,7 +51,8 @@ if (!$seo_video && !$seo_hero_title && !$seo_hero_subtitle && !$seo_hero_subtitl
                 <h2 class="bold-20 font-manrope text-title text-center xl:text-left">
                    <?php echo esc_html($seo_hero_subtitle_three); ?>
                 </h2>
-                <div class="scramble-text font-kode normal-14 text-title wrap-break-words text-center xl:text-left" data-target="<?php echo esc_attr(get_field('seo_hero_scramble')); ?>"></div>
+                <?php $scramble = get_field('seo_hero_scramble'); ?>
+                <div class="scramble-text font-kode normal-14 text-title wrap-break-words text-center xl:text-left" data-target="<?php esc_attr( is_string($scramble) ? $scramble : '' ); ?>"></div>
             </div>
         </div>
 
