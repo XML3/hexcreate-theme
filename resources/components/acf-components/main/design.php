@@ -5,11 +5,12 @@ $design_content = get_field('design_content');
 $ux_design_image = get_field('ux_design_image');
 $percentage_blocks = get_field('percentage_blocks');
 $backgound_design_image = get_field('background_design_image');
-$design_page_button = get_field('design_page_button');
+$design_read_more_button = get_field('design_read_more_button');
+$cta_button = get_field('cta_button');
 
 
 
-if (!$design_title && !$design_subtitle && !$design_content && !$percentage_blocks && !$backgound_design_image && !$design_page_button) return;
+if (!$design_title && !$design_subtitle && !$design_content && !$percentage_blocks && !$backgound_design_image && !$design_read_more_button && !$cta_button) return;
 ?>
 
 <section class="vertical-text-scroll container-wide lg:min-h-[calc(100vh-65vh)] short-mobile-scroll">
@@ -44,9 +45,14 @@ if (!$design_title && !$design_subtitle && !$design_content && !$percentage_bloc
             <h2 class="section-title font-manrope normal-20 text-title"><?php echo esc_html($design_title); ?></h2>
             <div class=" w-full flex flex-col space-y-4">
                 <div class="font-inter normal-60 text-font text-center xl:text-left"><?php echo wp_kses_post($design_content); ?> </div>
-                <a href="<?php echo get_permalink(get_page_by_path('design')); ?>"
-                    class="mt-8 w-full xl:w-2/4 inline-block px-8 py-2 bg-accent-orange font-inter text-primary primary thin-16 rounded-sm hover:border hover:border-accent hover:bg-light/10 hover:text-accent text-center">LEARN MORE →
+                 <div class="flex flex-col md:flex-row gap-0 md:gap-2 mb-4 xl:mb-0">
+                <a href="<?php echo esc_url($design_read_more_button['url']); ?>"
+                    class="mt-8 w-full xl:w-1/3 inline-block py-2 xl:py-3 bg-transparent font-inter border border-title text-title thin-16 rounded-sm hover:border hover:border-none hover:bg-accent-orange hover:text-primary text-center"><?php echo esc_html($design_read_more_button['title'])?>
                 </a>
+                <a href="<?php echo esc_url($cta_button['url']); ?>"
+                    class="mt-8 w-full xl:w-2/4 inline-block py-2 xl:py-3 bg-accent-orange font-inter text-primary primary thin-16 rounded-sm hover:border hover:border-accent hover:bg-light/10 hover:text-accent text-center"><?php echo esc_html($cta_button['title'])?>
+                </a>
+</div>
             </div>
         </div>
 

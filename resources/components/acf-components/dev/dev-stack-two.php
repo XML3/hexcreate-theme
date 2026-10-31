@@ -30,9 +30,9 @@ if ( !$stack_decision_title && !$stack_decision_intro && !$stack_closing_title &
             </div>
 
             <!-- Right column content -->
-            <div class="space-y-6 w-full 2xl:w-3/4 flex justify-self-end flex-col bg-primary p-4 xl:p-20 rounded-2xl mt-8 xl:mt-0">
-                <h4 class="vertical-text-scroll font-manrope semi-bold-20 text-title text-left lg:text-left"><?php echo esc_html($stack_closing_title); ?></h4>
-                <div class="vertical-text-scroll font-inter normal-16 text-font text-left lg:text-left"><?php echo wp_kses_post($stack_closing_line); ?></div>
+            <div class="vertical-text-scroll space-y-6 w-full 2xl:w-3/4 flex justify-self-end flex-col bg-primary p-4 xl:p-20 rounded-2xl mt-8 xl:mt-0">
+                <h4 class="font-manrope semi-bold-20 text-title text-left lg:text-left"><?php echo esc_html($stack_closing_title); ?></h4>
+                <div class="font-inter normal-16 text-font text-left lg:text-left"><?php echo wp_kses_post($stack_closing_line); ?></div>
                 <?php if ($stack_contact_button) : ?>
                     <a href="<?php echo esc_url($stack_contact_button['url']); ?>"
                         class="w-full inline-block bg-accent-orange text-primary text-center px-8 py-3 rounded-md hover:bg-accent hover:text-primary transition mt-8">

@@ -30,10 +30,10 @@ if (
         <div class="grid grid-cols-1 xl:grid-cols-2 w-full mt-8 xl:mt-0 gap-30">
 
             <!-- Left column content -->
-             
-            <div class="vertical-text-scroll space-y-8 w-full xl:w-3/4">
+
+            <div class="vertical-text-scroll w-full xl:w-3/4 h-full">
+                  <h3 class="font-manrope normal-60 text-title mb-8"><?php echo esc_html($dev_title); ?></h3>
                 <div class="space-y-4">
-                    <h3 class="font-manrope normal-60 text-title mb-8"><?php echo esc_html($dev_title); ?></h3>
                     <h4 class="font-manrope semi-bold-20 text-title"><?php echo esc_html($dev_subtitle); ?></h4>
                     <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($dev_content_one); ?></div>
                 </div>
@@ -48,17 +48,18 @@ if (
             </div>
 
             <!-- Right column content -->
-            <div class="space-y-6 w-full 2xl:w-3/4 flex justify-self-end flex-col bg-primary p-4 xl:p-20 rounded-2xl mt-8 xl:mt-0">
-                <h4 class="vertical-text-scroll font-manrope semi-bold-20 text-title text-left lg:text-left"><?php echo esc_html($dev_subtitle_two); ?></h4>
-                <div class="vertical-text-scroll font-inter normal-16 text-font text-left lg:text-left"><?php echo wp_kses_post($dev_content_two); ?></div>
-                <?php if ($lets_talk_button) : ?>
-                    <a href="<?php echo esc_url($lets_talk_button['url']); ?>"
-                        class="w-full inline-block bg-accent-orange text-primary text-center px-8 py-3 rounded-md hover:bg-accent hover:text-primary transition mt-8">
-                        <?php echo esc_html($lets_talk_button['title']); ?>
-                    </a>
-                <?php endif; ?>
+            <div class="vertical-text-scroll full h-full flex justify-center items-center  bg-primary p-4 rounded-2xl mt-8 xl:mt-0">
+                <div class="w-full 2xl:w-3/4 h-full flex justify-center items-center flex-col space-y-8">
+                    <h4 class="font-manrope bold-24 text-title text-left"><?php echo esc_html($dev_subtitle_two); ?></h4>
+                    <div class="font-inter normal-16 text-font text-left"><?php echo wp_kses_post($dev_content_two); ?></div>
+                    <?php if ($lets_talk_button) : ?>
+                        <a href="<?php echo esc_url($lets_talk_button['url']); ?>"
+                            class="w-full xl:w-3/4 inline-block bg-accent-orange text-primary text-center py-3 rounded-md hover:bg-accent hover:text-primary transition mt-8">
+                            <?php echo esc_html($lets_talk_button['title']); ?>
+                        </a>
+                    <?php endif; ?>
+                </div>
             </div>
-
         </div>
     </div>
 </section>

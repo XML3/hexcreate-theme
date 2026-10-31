@@ -11,10 +11,10 @@ if (!$seo_title && !$seo_subtitle && !$seo_content && !$optimization && !$optimi
 <!-- Single pinned screen with horizontal scroll -->
 <div class="horizontal-scroll-screen min-h-screen bg-primary flex justify-around flex-col">
     <div class="container-wide">
-        <div class="bg-secondary rounded-2xl py-8">
+        <div class="vertical-text-scroll bg-secondary rounded-2xl py-8">
             <div class="container-content w-full flex justify-between items-center flex-col xl:flex-row gap-6 xl:gap-0">
                 <!-- Top content -->
-                <div class="vertical-text-scroll w-full xl:w-1/2 space-y-4 text-left">
+                <div class="w-full xl:w-1/2 space-y-4 text-left">
                     <h2 class="section-title font-manrope normal-20 text-title mb-4"><?php echo esc_html($seo_title); ?></h2>
                     <h3 class="font-manrope bold-48-62 text-title"><?php echo esc_html($seo_subtitle); ?></h3>
                     <div class="font-inter normal-16 text-font"><?php echo wp_kses_post($seo_content); ?></div>
@@ -35,7 +35,7 @@ if (!empty($optimisation_image)) :
     }
 
     if ($img_url) : ?>
-        <div class="vertical-text-scroll w-full md:max-w-sm h-auto flex justify-center xl:justify-end items-center">
+        <div class="w-full md:max-w-sm h-auto flex justify-center xl:justify-end items-center">
             <img class="object-contain"
                  src="<?php echo esc_url($img_url); ?>"
                  alt="<?php echo esc_attr($img_alt); ?>">
@@ -81,7 +81,7 @@ endif; ?>
                                 <h4 class="font-manrope bold-18 text-title"><?php echo esc_html($item['subtitle']); ?></h4>
                             <?php endif; ?>
                             <?php if ($item['content']): ?>
-                                <div class="font-inter normal-16 mt-2 text-title"><?php echo wp_kses_post($item['content']); ?></div>
+                                <div class="font-inter normal-16 mt-2 text-font"><?php echo wp_kses_post($item['content']); ?></div>
                             <?php endif; ?>
                         </div>
                     </div>

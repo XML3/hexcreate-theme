@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: SEO
+Template Name: SEO Page
 */
 get_header();
 ?>
