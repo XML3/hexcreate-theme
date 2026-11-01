@@ -13,7 +13,7 @@ if (!$hero_title && !$hero_subtitle && !$hero_subtitle_two && !$hero_subtitle_th
 
 <section class="hero-section top-0 min-h-screen flex justify-between items-center bg-primary">
     <!-- X Logo - Hidden initially, revealed at end -->
-    <div class="fixed-logo absolute top-[42%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none  w-full">
+    <div class="fixed-logo absolute top-[42%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none w-full">
         <!-- <div class=" halftone-gradient "></div> -->
         <div class="hero-logo-mask">
             <div class=" halftone-gradient "></div>
@@ -24,7 +24,7 @@ if (!$hero_title && !$hero_subtitle && !$hero_subtitle_two && !$hero_subtitle_th
 
     <div class="relative z-0  w-full h-screen flex justify-between flex-col xl:flex-row mb-4">
         <!-- Hexcreate & Subtitle -->
-        <div class="container-wide w-full h-full flex justify-start items-end gap-4 relative bottom-5 xl:bottom-10">
+        <div class="container-wide w-full h-full flex justify-start items-end gap-4 relative bottom-10">
             <div class="flex-col">
                 <h4 class="scramble-text font-manrope thin-16 text-title mb-2" data-target="<?php echo esc_attr(get_field('hero_title')); ?>"></h4>
                 <h4 class="scramble-text w-full thin-12 text-title font-inter"><?php echo esc_html($hero_subtitle_two); ?></h4>
