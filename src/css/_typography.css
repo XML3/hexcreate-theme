@@ -75,6 +75,10 @@
     @apply text-[18px] lg:text-[24px] leading-[32px] lg:tracking-[0.8px] font-bold;
   }
 
+  .bold-24-16 {
+    @apply text-[14px] lg:text-[22px] xl:text-[24px] leading-none lg:leading-[1.2] xl:leading-8 lg:tracking-[0px] xl:tracking-[0.8px] font-bold;
+  }
+
   .bold-32 {
     @apply text-[24px] lg:text-[32px] leading-[52px] lg:tracking-[1.2px] font-bold;
   }

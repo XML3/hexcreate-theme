@@ -78,7 +78,7 @@ $hexcreate_copywrite = get_field('hexcreate_copywrite');
                 <div class="flex flex-col no-outline text-center">
                     <div class="flex flex-row no-outline">
                         <h3 class="font-inter extrabold-184 text-title"><?php echo esc_html($hexcreate_brand); ?></h3>
-                        <h3 class="font-inter bold-20 text-title border-2 border-title rounded-full p-1 h-1/4 lg:p-2 lg:h-1/2"><?php echo esc_html($hc_brand); ?></h3>
+                        <h3 class="relative flex size-7 lg:size-11 xl:size-12 items-center justify-center top-0 lg:top-5 xl:top-10 font-manrope bold-24-16 text-title border xl:border-2 border-title rounded-full"><?php echo esc_html($hc_brand); ?></h3>
                     </div>
                     <p class="font-inter thin-12 text-title text-center"><?php echo esc_html($hexcreate_copywrite); ?></p>
                 </div>
