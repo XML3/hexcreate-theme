@@ -39,19 +39,19 @@ function initCards() {
         "url('/wp-content/themes/hexcreate/src/images/solutions/hexcreate-solutions-orange.png')",
     },
     {
-      bg: "#616060",
-      text: "#fff",
-      accent: "#f5b342",
+      bg: "#d4c4b0",
+      text: "#000",
+      accent: "#1e1e1e",
       image:
-        "url('/wp-content/themes/hexcreate/src/images/solutions/hexcreate-solutions-four.png')",
+        "url('/wp-content/themes/hexcreate/src/images/solutions/hexcreate-solutions-two.png')",
     },
 
     {
-      bg: "#004f5d",
+      bg: "#ff5050",
       text: "#ffffff",
-      accent: "#ff5050",
+      accent: "#ffffff",
       image:
-        "url('/wp-content/themes/hexcreate/src/images/solutions/hexcreate-solutions-six-two.png')",
+        "url('/wp-content/themes/hexcreate/src/images/solutions/hexcreate-black-tri.png')",
     },
   ];
 

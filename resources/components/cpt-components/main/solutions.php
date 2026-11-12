@@ -49,7 +49,7 @@ $solution_cards = get_posts([
              ">
                         <div class="relative z-10 h-full flex flex-col xl:flex-row justify-center items-center xl:max-w-full xl:mx-auto text-center xl:text-left gap-6 xl:gap-0 ">
                             <div class="flex justify-center items-center xl:border-r border-primary h-full pr-0 xl:pr-10 mb-4 xl:mb-0">
-                                <?php if ($post->ID == 39) : ?>
+                                <?php if ($post->ID == 39 || $post->ID == 364) : ?>
                                     <div class="text-title font-kelly bold-40 xl:mb-4"><?php echo esc_html($card_number); ?></div>
                                 <?php else : ?>
                                     <div class="text-accent-orange font-kelly bold-40 xl:mb-4"><?php echo esc_html($card_number); ?></div>
